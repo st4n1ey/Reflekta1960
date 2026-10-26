@@ -1,0 +1,163 @@
+/* Hand-drawn strokes: hidden until a script draws them */
+.draw {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.draw--accent { stroke: var(--accent); }
+
+/* ---------- Hero fill: sketchbook, pencil, sun ---------- */
+.hero--about .collage { top: 5.5rem; }
+.hero--about .piece--sun { --x: 62%; --y: 4%; --w: 24%; }
+.hero--about .piece--star { --x: 55%; --y: 0%; --w: 10%; }
+.hero--about .piece--sketchpage { --x: 6%; --y: 4%; --w: 36%; --r: -3deg; }
+.hero--about .piece--pencil { --x: 24%; --y: 60%; --w: 38%; --r: -12deg; }
+.hero--about .piece--since { --x: 68%; --y: 52%; --w: 26%; --r: -6deg; }
+
+.sketchpage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  padding: 0.9rem 0.9rem 0.9rem 2rem;
+  background-color: var(--paper-light);
+  background-image: repeating-linear-gradient(transparent 0 1.55rem, rgb(6 36 31 / 0.1) 1.55rem 1.6rem);
+}
+.sketchpage::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 0.8rem;
+  background: radial-gradient(circle 0.26rem at 50% 50%, var(--paper) 94%, transparent) 0 0 / 100% 1.1rem repeat-y;
+}
+.sketchpage svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.pencil { display: block; width: 100%; height: auto; overflow: visible; }
+
+/* ---------- Story ---------- */
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  padding: clamp(3rem, 8vw, 7rem) var(--pad);
+}
+.story__aside { position: sticky; top: 7rem; align-self: start; }
+.story__since { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 0.9; rotate: -3deg; }
+.scribble { display: block; width: min(100%, 16rem); height: auto; margin-top: 0.8rem; overflow: visible; }
+.scribble .draw { stroke: var(--accent); stroke-width: 3; }
+
+.story__title { font-size: clamp(2rem, 4.2vw, 3.6rem); margin: 0.4rem 0 1.4rem; }
+.story__body p { max-width: 38ch; margin-bottom: 1.1rem; font-size: clamp(1.1rem, 1.5vw, 1.3rem); line-height: 1.5; }
+.sign { display: grid; gap: 0.2rem; margin-top: 1.8rem; }
+.sign .script { font-size: 2.6rem; line-height: 1; }
+.sign svg { display: block; width: 9rem; height: auto; overflow: visible; }
+.sign small { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim); }
+
+/* ---------- Draw. Paint. Wear. ---------- */
+.journey { padding: 0 var(--pad) clamp(3rem, 7vw, 6rem); }
+.journey__head { margin-bottom: 2.5rem; }
+.journey__head h2 { font-size: clamp(1.9rem, 4vw, 3.4rem); margin-top: 0.3rem; }
+.journey__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+.journey__line {
+  position: absolute;
+  left: 0;
+  top: 5.6rem;
+  width: 100%;
+  height: 3rem;
+  overflow: visible;
+  pointer-events: none;
+}
+.journey__line .draw { stroke-width: 1.4; }
+.step-card {
+  position: relative;
+  z-index: 1;
+  padding: 1.4rem 1.4rem 1.6rem;
+  background: var(--paper-light);
+  box-shadow: 0 14px 30px -16px rgb(6 36 31 / 0.5);
+  rotate: var(--r, 0deg);
+}
+.step-card:nth-of-type(1) { --r: -1deg; }
+.step-card:nth-of-type(2) { --r: 0.7deg; }
+.step-card:nth-of-type(3) { --r: -0.6deg; }
+.step-card__num { font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-dim); }
+.step-card__art { display: grid; place-items: center; height: 9rem; margin-block: 0.6rem; }
+.step-card__art svg { width: auto; height: 100%; overflow: visible; }
+.step-card h3 { font-size: clamp(1.7rem, 2.6vw, 2.4rem); margin-bottom: 0.4rem; }
+.pop, .drop { transform-box: fill-box; }
+.pop { fill: var(--accent); }
+.drop { fill: none; stroke: var(--accent); stroke-width: 7; stroke-linecap: round; }
+
+/* ---------- Your turn: the sketchbook ---------- */
+.sketch {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(3rem, 7vw, 6rem) var(--pad);
+  border-top: 1px solid var(--ink);
+}
+.sketch__copy h2 { font-size: clamp(2rem, 4vw, 3.4rem); margin: 0.3rem 0 1rem; }
+.sketch__copy p { max-width: 30ch; }
+.sketch__page {
+  position: relative;
+  padding: 1rem 1rem 1rem 3rem;
+  background: var(--paper-light);
+  box-shadow: 0 22px 40px -22px rgb(6 36 31 / 0.55);
+  rotate: 1deg;
+}
+.sketch__page::before {
+  content: "";
+  position: absolute;
+  left: 0.8rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: 1rem;
+  background: radial-gradient(circle 0.34rem at 50% 50%, var(--paper) 94%, transparent) 0 0 / 100% 1.5rem repeat-y;
+}
+.sketch__pad {
+  position: relative;
+  height: clamp(18rem, 46vh, 27rem);
+  overflow: hidden;
+  background-image: repeating-linear-gradient(transparent 0 calc(2rem - 1px), rgb(6 36 31 / 0.12) calc(2rem - 1px) 2rem);
+}
+.sketch__canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; }
+html.has-custom-cursor .sketch__canvas { cursor: crosshair !important; }
+html:has(.sketch__canvas:hover) .cursor-dot,
+html:has(.sketch__canvas:hover) .cursor-ring { opacity: 0 !important; }
+.sketch__hint {
+  position: absolute;
+  left: 1.2rem;
+  top: 0.8rem;
+  font-size: 2.2rem;
+  line-height: 1;
+  rotate: -3deg;
+  color: var(--ink-dim);
+  pointer-events: none;
+}
+.sketch__tools { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-top: 1rem; }
+.swatch {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: var(--c);
+  transition: outline-offset 0.3s ease;
+}
+.swatch[aria-pressed="true"] { outline: 2px solid var(--ink); outline-offset: 3px; }
+.tool { margin-left: auto; font-style: italic; border-bottom: 1px solid var(--ink); }
+.tool + .tool { margin-left: 1rem; }
+
+@media (max-width: 800px) {
+  .story { grid-template-columns: 1fr; }
+  .story__aside { position: static; }
+  .journey__grid { grid-template-columns: 1fr; }
+  .journey__line { display: none; }
+  .sketch { grid-template-columns: 1fr; }
+}

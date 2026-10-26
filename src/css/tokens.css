@@ -1,0 +1,16 @@
+:root {
+  --paper: #dcd5c4;
+  --paper-light: #ece7d9;
+  --ink: #06241f;
+  --ink-dim: #06241fa8;
+  --green: #004741;
+  --green-dark: #00302c;
+  --accent: #cc5522;
+
+  --font-display: "DM Serif Display", serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --font-script: "Reenie Beanie", cursive;
+
+  --pad: clamp(1.25rem, 3vw, 2.5rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

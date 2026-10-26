@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflekta 1960</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+    <script>if(sessionStorage.getItem("rk-t")){document.documentElement.classList.add("is-transitioning");var s=document.createElement("style");s.textContent="html.is-transitioning{background:#004741}html.is-transitioning body{visibility:hidden}";document.head.appendChild(s);setTimeout(function(){document.documentElement.classList.remove("is-transitioning")},3000)}</script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <!-- Shared SVG filters: water ripple + rough painted edges -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <filter id="ripple" x="-5%" y="-10%" width="110%" height="120%">
+        <feTurbulence type="turbulence" baseFrequency="0.006 0.06" numOctaves="1" seed="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="9" />
+      </filter>
+    </svg>
+
+    <main class="page">
+      <section class="hero">
+        <!-- Paper collage built from the real artworks -->
+        <div class="collage">
+          <div class="piece piece--sun" data-depth="0.3"><span class="sun"></span></div>
+
+          <div class="piece piece--star" data-depth="1.3">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <g stroke="#06241f" stroke-width="3.2" stroke-linecap="round" fill="none">
+                <path d="M50 50 L47 4" /><path d="M50 50 L92 18" /><path d="M50 50 L98 52" />
+                <path d="M50 50 L84 90" /><path d="M50 50 L52 98" /><path d="M50 50 L14 86" />
+                <path d="M50 50 L3 49" /><path d="M50 50 L16 14" />
+              </g>
+            </svg>
+          </div>
+
+          <div class="piece piece--wave" data-depth="0.5">
+            <svg viewBox="0 0 100 520" aria-hidden="true">
+              <path class="wave__paper" d="M52 0 C 84 52, 18 104, 52 156 S 84 260, 52 312 S 18 416, 52 468 L 52 520" />
+              <path class="wave__ink" d="M52 0 C 84 52, 18 104, 52 156 S 84 260, 52 312 S 18 416, 52 468 L 52 520" />
+            </svg>
+          </div>
+
+          <a class="piece piece--art piece--torso" href="/gallery.html" data-depth="0.7" data-cursor="View">
+            <span class="torn torn-a">
+              <img src="/images/art/torso.jpg" alt="Black and white painted silhouette of a woman's torso, signed 1960" />
+            </span>
+          </a>
+
+          <div class="piece piece--green" data-depth="0.9"><span class="green-block"></span></div>
+
+          <a class="piece piece--art piece--sunset" href="/gallery.html" data-depth="1" data-cursor="View">
+            <span class="torn torn-b">
+              <img src="/images/art/sunset.jpg" alt="Painted sunset landscape in orange, blue and grey" />
+            </span>
+          </a>
+
+          <a class="piece piece--art piece--zebra" href="/gallery.html" data-depth="1.15" data-cursor="View">
+            <span class="torn torn-c">
+              <img src="/images/art/zebra.jpg" alt="Close-up painting of a zebra's eye and stripes" />
+            </span>
+          </a>
+
+          <div class="piece piece--note" data-depth="1.2">
+            <p class="script">Art<br />lives<br />longer.</p>
+            <svg viewBox="0 0 120 10" aria-hidden="true"><path d="M2 6 C 30 2, 70 8, 118 3" /></svg>
+          </div>
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow">Art &amp; Merch</p>
+          <h1 class="hero__title"><span>Reflekta</span><span>1960</span></h1>
+          <p class="hero__sub">Art and merch, made to be looked at twice.</p>
+          <svg class="hero__underline" viewBox="0 0 170 12" preserveAspectRatio="none" aria-hidden="true">
+            <path pathLength="1" d="M2 8 C 40 3, 90 7, 168 3" />
+          </svg>
+          <a class="btn-oval" href="/gallery.html">
+            <svg viewBox="0 0 300 66" preserveAspectRatio="none" aria-hidden="true">
+              <path pathLength="1" d="M12 30 C 8 12, 90 4, 160 5 C 230 6, 294 12, 292 34 C 290 56, 220 62, 150 61 C 80 60, 14 54, 12 30 Z" />
+            </svg>
+            <span>Explore the collection</span><i>&rarr;</i>
+          </a>
+        </div>
+
+        <div class="hero__foot"><span>Timeless art</span><em>/</em><span>Modern soul.</span></div>
+      </section>
+
+      <!-- Sunrise on the water line: stamp + words + sun above, reflections below -->
+      <section class="mirror">
+        <div class="mirror__cell mirror__cell--top mirror__c1">
+          <div class="badge">
+            <svg class="badge__svg" viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="badge-circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+              <g class="badge__ring">
+                <text textLength="486" lengthAdjust="spacing"><textPath href="#badge-circle">REFLEKTA 1960 · ART &amp; MERCH · LOOK TWICE · </textPath></text>
+              </g>
+              <g stroke="#06241f" stroke-width="2" stroke-linecap="round" fill="none">
+                <path d="M100 76 V124 M76 100 H124 M83 83 L117 117 M117 83 L83 117" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="mirror__cell mirror__cell--top mirror__c2">
+          <div class="mirror__word" data-mirror>Look twice</div>
+        </div>
+        <div class="mirror__cell mirror__cell--top mirror__c3">
+          <div class="sunrise"><span class="sunrise__disc"></span></div>
+        </div>
+
+        <div class="mirror__line"><span>Reflekta 1960</span></div>
+
+        <div class="mirror__cell mirror__cell--bottom mirror__c1" aria-hidden="true">
+          <div class="badge is-reflect">
+            <svg class="badge__svg" viewBox="0 0 200 200">
+              <defs><path id="badge-circle-2" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+              <g class="badge__ring">
+                <text textLength="486" lengthAdjust="spacing"><textPath href="#badge-circle-2">REFLEKTA 1960 · ART &amp; MERCH · LOOK TWICE · </textPath></text>
+              </g>
+              <g stroke="#06241f" stroke-width="2" stroke-linecap="round" fill="none">
+                <path d="M100 76 V124 M76 100 H124 M83 83 L117 117 M117 83 L83 117" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="mirror__cell mirror__cell--bottom mirror__c2" aria-hidden="true">
+          <div class="mirror__word is-reflect" data-mirror>Look twice</div>
+        </div>
+        <div class="mirror__cell mirror__cell--bottom mirror__c3" aria-hidden="true">
+          <div class="sunrise is-reflect"><span class="sunrise__disc"></span></div>
+        </div>
+      </section>
+
+      <section class="statement">
+        <p class="statement__text">
+          Every piece is a reflection of something seen, felt or remembered. Art for your walls, merch for the world outside.
+        </p>
+
+        <div class="canvas" aria-hidden="true">
+          <span class="canvas__tape canvas__tape--l"></span>
+          <span class="canvas__tape canvas__tape--r"></span>
+          <svg class="paint" viewBox="0 0 400 440">
+            <g filter="url(#rough)">
+              <path class="spill" d="M96 118 C 60 80, 120 30, 190 46 C 250 8, 336 40, 330 112 C 382 150, 362 214, 336 246 C 372 300, 330 352, 268 340 C 236 376, 160 372, 140 332 C 84 340, 38 290, 70 244 C 30 206, 52 150, 96 118 Z" />
+              <g class="drips">
+                <path d="M168 335 V405" />
+                <path d="M226 350 V432" />
+                <path d="M276 330 V382" />
+              </g>
+              <path class="brush" pathLength="1" d="M30 392 C 110 360, 210 410, 372 366" />
+            </g>
+            <g class="splatter" filter="url(#rough)">
+              <circle cx="364" cy="70" r="7" />
+              <circle cx="380" cy="98" r="4" />
+              <circle cx="30" cy="150" r="6" />
+              <circle cx="52" cy="116" r="3" />
+              <circle class="ink" cx="356" cy="300" r="5" />
+              <circle class="ink" cx="40" cy="300" r="4" />
+              <circle cx="70" cy="60" r="4" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="featured">
+        <div class="featured__head">
+          <h2>Featured art</h2>
+          <a href="/gallery.html" data-cursor="Open">View all</a>
+        </div>
+
+        <div class="featured__grid">
+          <article class="art-card" data-cursor="View">
+            <div class="art-card__frame">
+              <div class="art-card__window">
+                <img class="art-card__img" src="/images/art/triptych.jpg" alt="Three-panel painting: orange, a road to the horizon, and deep blue" />
+              </div>
+            </div>
+            <div class="art-card__meta"><span class="num">01</span><h3>Three Panels</h3><span class="year">Painting</span></div>
+          </article>
+
+          <article class="art-card" data-cursor="View">
+            <div class="art-card__frame">
+              <div class="art-card__window">
+                <img class="art-card__img" src="/images/art/orange-silhouettes.jpg" alt="Orange painting with dark silhouettes against a blue horizon" />
+              </div>
+            </div>
+            <div class="art-card__meta"><span class="num">02</span><h3>Orange Hour</h3><span class="year">Painting</span></div>
+          </article>
+
+          <article class="art-card" data-cursor="View">
+            <div class="art-card__frame">
+              <div class="art-card__window">
+                <img class="art-card__img" src="/images/art/portrait.jpg" alt="Black ink portrait of a man in a cap, painted on plywood" />
+              </div>
+            </div>
+            <div class="art-card__meta"><span class="num">03</span><h3>Portrait on Plywood</h3><span class="year">Painting</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="merch">
+        <div class="merch__head">
+          <h2>Wear the art</h2>
+          <a href="/merch.html" data-cursor="Shop">Shop merch</a>
+        </div>
+
+        <div class="line">
+          <svg class="line__string" aria-hidden="true"><path d="" /></svg>
+
+          <a class="tag" href="/merch.html" data-cursor="Shop">
+            <span class="tag__pin"></span>
+            <span class="tag__photo"><img src="/images/merch/tee-front.jpg" alt="Maroon t-shirt with a white KOTULA print on the front" /></span>
+            <span class="tag__meta"><i>01</i><b>Kotula Tee</b></span>
+          </a>
+
+          <a class="tag" href="/merch.html" data-cursor="Shop">
+            <span class="tag__pin"></span>
+            <span class="tag__photo"><img src="/images/merch/tee-back.jpg" alt="Maroon t-shirt with a white print of dancing figures on the back" /></span>
+            <span class="tag__meta"><i>02</i><b>Dancers Back Print</b></span>
+          </a>
+
+          <a class="tag" href="/merch.html" data-cursor="Shop">
+            <span class="tag__pin"></span>
+            <span class="tag__photo"><img src="/images/merch/hoodie-back.jpg" alt="Black hoodie with a white and red 'We are who we are' print on the back" /></span>
+            <span class="tag__meta"><i>03</i><b>We Are Who We Are Hoodie</b></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="cta">
+        <a href="/merch.html" class="cta__card cta__card--shop" data-cursor="Shop">
+          <span class="fan" aria-hidden="true">
+            <img src="/images/merch/tee-front.jpg" alt="" />
+            <img src="/images/merch/tee-back.jpg" alt="" />
+            <img src="/images/merch/hoodie-back.jpg" alt="" />
+          </span>
+          <span class="cta__eyebrow">01 &mdash; Merch</span>
+          <span class="cta__title">Shop the merch</span>
+          <span class="cta__arrow">&nearr;</span>
+        </a>
+
+        <a href="/gallery.html" class="cta__card cta__card--gallery" data-cursor="Browse">
+          <span class="fan" aria-hidden="true">
+            <img src="/images/art/torso.jpg" alt="" />
+            <img src="/images/art/zebra.jpg" alt="" />
+            <img src="/images/art/sunset.jpg" alt="" />
+          </span>
+          <span class="cta__eyebrow">02 &mdash; Art</span>
+          <span class="cta__title">Browse the gallery</span>
+          <span class="cta__arrow">&nearr;</span>
+        </a>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

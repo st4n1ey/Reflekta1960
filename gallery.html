@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Reflekta 1960</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+    <script>if(sessionStorage.getItem("rk-t")){document.documentElement.classList.add("is-transitioning");var s=document.createElement("style");s.textContent="html.is-transitioning{background:#004741}html.is-transitioning body{visibility:hidden}";document.head.appendChild(s);setTimeout(function(){document.documentElement.classList.remove("is-transitioning")},3000)}</script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main class="page">
+      <section class="hero hero--compact">
+        <div class="collage" aria-hidden="true">
+          <div class="piece piece--sun" data-depth="0.3"><span class="sun"></span></div>
+          <div class="piece piece--star" data-depth="1.3">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <g stroke="#06241f" stroke-width="3.2" stroke-linecap="round" fill="none">
+                <path d="M50 50 L47 4" /><path d="M50 50 L92 18" /><path d="M50 50 L98 52" />
+                <path d="M50 50 L84 90" /><path d="M50 50 L52 98" /><path d="M50 50 L14 86" />
+                <path d="M50 50 L3 49" /><path d="M50 50 L16 14" />
+              </g>
+            </svg>
+          </div>
+          <div class="piece piece--strip" data-depth="0.8">
+            <span class="torn torn-a"><img src="/images/art/triptych.jpg" alt="" /></span>
+          </div>
+          <div class="piece piece--strip2" data-depth="1.1">
+            <span class="torn torn-c"><img src="/images/art/orange-silhouettes.jpg" alt="" /></span>
+          </div>
+          <div class="piece piece--hint" data-depth="1.2">
+            <p class="script">the wall,<br />below</p>
+            <svg viewBox="0 0 60 50" aria-hidden="true">
+              <path d="M5 5 C 30 5, 50 20, 40 44" />
+              <path d="M32 36 L40 46 L48 36" />
+            </svg>
+          </div>
+          <div class="piece piece--note" data-depth="1.2">
+            <p class="script">Every piece,<br />one of one.</p>
+            <svg viewBox="0 0 120 10" aria-hidden="true"><path d="M2 6 C 30 2, 70 8, 118 3" /></svg>
+          </div>
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow">The collection</p>
+          <h1 class="hero__title">Gallery</h1>
+          <p class="hero__sub">Original paintings, one wall at a time.</p>
+          <svg class="hero__underline" viewBox="0 0 170 12" preserveAspectRatio="none" aria-hidden="true">
+            <path pathLength="1" d="M2 8 C 40 3, 90 7, 168 3" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="gallery__bar">
+          <div class="filters" role="group" aria-label="Filter artworks">
+            <span class="filters__pill" aria-hidden="true"></span>
+            <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" data-filter="figures" aria-pressed="false">Figures</button>
+            <button class="chip" data-filter="landscapes" aria-pressed="false">Landscapes</button>
+            <button class="chip" data-filter="abstract" aria-pressed="false">Abstract</button>
+          </div>
+          <p class="wall__count"><span data-count>6</span> works</p>
+        </div>
+
+        <div class="wall">
+          <article class="work" data-cat="figures" data-num="01" data-title="Figure, 1960"
+            data-note="Black and white figure, signed 1960."
+            tabindex="0" role="button" aria-label="Open Figure, 1960" data-cursor="View" style="--ratio: 0.8">
+            <div class="work__frame"><div class="work__window">
+              <img src="/images/art/torso.jpg" alt="Black and white painted silhouette of a woman's torso, signed 1960" />
+            </div></div>
+            <div class="work__meta"><span class="num">01</span><h3>Figure, 1960</h3><span class="cat">Figures</span></div>
+          </article>
+
+          <article class="work" data-cat="landscapes" data-num="02" data-title="Dusk Ridge"
+            data-note="Dusk over a ridge, in orange, blue and grey."
+            tabindex="0" role="button" aria-label="Open Dusk Ridge" data-cursor="View" style="--ratio: 1.363">
+            <div class="work__frame"><div class="work__window">
+              <img src="/images/art/sunset.jpg" alt="Painted sunset landscape in orange, blue and grey" />
+            </div></div>
+            <div class="work__meta"><span class="num">02</span><h3>Dusk Ridge</h3><span class="cat">Landscapes</span></div>
+          </article>
+
+          <article class="work" data-cat="abstract" data-num="03" data-title="Stripes"
+            data-note="A close look at a zebra's eye and stripes."
+            tabindex="0" role="button" aria-label="Open Stripes" data-cursor="View" style="--ratio: 0.8">
+            <div class="work__frame"><div class="work__window">
+              <img src="/images/art/zebra.jpg" alt="Close-up painting of a zebra's eye and stripes" />
+            </div></div>
+            <div class="work__meta"><span class="num">03</span><h3>Stripes</h3><span class="cat">Abstract</span></div>
+          </article>
+
+          <article class="work" data-cat="abstract" data-num="04" data-title="Three Panels"
+            data-note="Three panels: orange, an open road, and deep blue."
+            tabindex="0" role="button" aria-label="Open Three Panels" data-cursor="View" style="--ratio: 2.352">
+            <div class="work__frame"><div class="work__window">
+              <img src="/images/art/triptych.jpg" alt="Three-panel painting: orange, a road to the horizon, and deep blue" />
+            </div></div>
+            <div class="work__meta"><span class="num">04</span><h3>Three Panels</h3><span class="cat">Abstract</span></div>
+          </article>
+
+          <article class="work" data-cat="figures" data-num="05" data-title="Portrait on Plywood"
+            data-note="Black ink portrait on plywood."
+            tabindex="0" role="button" aria-label="Open Portrait on Plywood" data-cursor="View" style="--ratio: 0.8">
+            <div class="work__frame"><div class="work__window">
+              <img src="/images/art/portrait.jpg" alt="Black ink portrait of a man in a cap, painted on plywood" />
+            </div></div>
+            <div class="work__meta"><span class="num">05</span><h3>Portrait on Plywood</h3><span class="cat">Figures</span></div>
+          </article>
+
+          <article class="work" data-cat="landscapes" data-num="06" data-title="Orange Hour"
+            data-note="Silhouettes at the edge of an orange sky."
+            tabindex="0" role="button" aria-label="Open Orange Hour" data-cursor="View" style="--ratio: 1.997">
+            <div class="work__frame"><div class="work__window">
+              <img src="/images/art/orange-silhouettes.jpg" alt="Orange painting with dark silhouettes against a blue horizon" />
+            </div></div>
+            <div class="work__meta"><span class="num">06</span><h3>Orange Hour</h3><span class="cat">Landscapes</span></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Artwork viewer">
+      <div class="lightbox__backdrop"></div>
+      <button class="lightbox__close" data-cursor="Close" aria-label="Close viewer">Close &times;</button>
+
+      <div class="lightbox__stage"><img class="lightbox__img" alt="" /></div>
+
+      <div class="lightbox__info">
+        <span class="lightbox__num"></span>
+        <h2 class="lightbox__title"></h2>
+        <p class="lightbox__cat"></p>
+        <p class="lightbox__note"></p>
+        <a class="lightbox__cta" href="/contact.html">Enquire about this piece &rarr;</a>
+      </div>
+
+      <div class="lightbox__nav">
+        <button class="lightbox__prev" aria-label="Previous artwork">&larr;</button>
+        <button class="lightbox__next" aria-label="Next artwork">&rarr;</button>
+        <span class="lightbox__count"></span>
+      </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

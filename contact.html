@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Reflekta 1960</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+    <script>if(sessionStorage.getItem("rk-t")){document.documentElement.classList.add("is-transitioning");var s=document.createElement("style");s.textContent="html.is-transitioning{background:#004741}html.is-transitioning body{visibility:hidden}";document.head.appendChild(s);setTimeout(function(){document.documentElement.classList.remove("is-transitioning")},3000)}</script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main class="page">
+      <section class="hero hero--compact hero--contact">
+        <!-- Mail-themed fill: stamps, postmark, paper plane, airmail ribbon -->
+        <div class="collage" aria-hidden="true">
+          <div class="piece piece--stampA" data-depth="0.8">
+            <div class="stamp stamp--orange">
+              <div class="stamp__art">
+                <svg class="stamp__star" viewBox="0 0 100 100">
+                  <g stroke="#ece7d9" stroke-width="3.4" stroke-linecap="round" fill="none">
+                    <path d="M50 50 L47 4" /><path d="M50 50 L92 18" /><path d="M50 50 L98 52" />
+                    <path d="M50 50 L84 90" /><path d="M50 50 L52 98" /><path d="M50 50 L14 86" />
+                    <path d="M50 50 L3 49" /><path d="M50 50 L16 14" />
+                  </g>
+                </svg>
+                <span class="stamp__year">1960</span>
+                <span class="stamp__label">Reflekta</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="piece piece--stampB" data-depth="1">
+            <div class="stamp stamp--green">
+              <div class="stamp__art">
+                <span class="stamp__sun"></span>
+                <span class="stamp__year">Hi.</span>
+                <span class="stamp__label">Say hello</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="piece piece--postmark" data-depth="1.1">
+            <svg viewBox="0 0 300 160">
+              <defs><path id="pm-circle" d="M80,80 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" /></defs>
+              <g class="postmark__ink">
+                <circle cx="80" cy="80" r="62" />
+                <circle cx="80" cy="80" r="38" />
+                <text><textPath href="#pm-circle" textLength="286" lengthAdjust="spacing">REFLEKTA 1960 · SAY HELLO · </textPath></text>
+                <text x="80" y="87" text-anchor="middle" style="font-size:20px;letter-spacing:0">1960</text>
+                <path d="M150 54 q18 -12 36 0 t36 0 t36 0 t36 0" />
+                <path d="M150 74 q18 -12 36 0 t36 0 t36 0 t36 0" />
+                <path d="M150 94 q18 -12 36 0 t36 0 t36 0 t36 0" />
+                <path d="M150 114 q18 -12 36 0 t36 0 t36 0 t36 0" />
+              </g>
+            </svg>
+          </div>
+
+          <div class="piece piece--flight" data-depth="0.6">
+            <svg viewBox="0 0 400 180">
+              <path id="flight-path" class="flight__trail" d="M10 150 C 80 20, 170 170, 240 90 S 340 20, 392 60" />
+              <g class="plane">
+                <g transform="scale(1.7)">
+                  <path d="M16 0 L-14 -9 L-8 0 L-14 9 Z" />
+                  <path d="M-8 0 L16 0" />
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <div class="piece piece--note piece--hello" data-depth="1.2">
+            <p class="script">Say<br />hello.</p>
+            <svg viewBox="0 0 120 10"><path d="M2 6 C 30 2, 70 8, 118 3" /></svg>
+          </div>
+
+          <div class="piece piece--airmail" data-depth="0.4"><div class="airmail"></div></div>
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow">Say hello</p>
+          <h1 class="hero__title">Contact</h1>
+          <p class="hero__sub">A painting, a piece of merch, or just hello. Write us a letter.</p>
+          <svg class="hero__underline" viewBox="0 0 170 12" preserveAspectRatio="none" aria-hidden="true">
+            <path pathLength="1" d="M2 8 C 40 3, 90 7, 168 3" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="letter">
+        <div class="letter__card">
+          <form class="letter__form" novalidate>
+            <div class="letter__head">
+              <span class="letter__dear script">Dear Reflekta,</span>
+              <div class="letter__tags"></div>
+            </div>
+
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="reply">Where can we reply? <small>(email or WhatsApp number)</small></label>
+              <input id="reply" name="reply" type="text" autocomplete="email" />
+            </div>
+
+            <fieldset class="topics">
+              <legend>About</legend>
+              <div class="topics__row">
+                <label class="topic"><input type="radio" name="topic" value="Art" /><span>Art</span></label>
+                <label class="topic"><input type="radio" name="topic" value="Merch" /><span>Merch</span></label>
+                <label class="topic"><input type="radio" name="topic" value="Something else" /><span>Something else</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field field--message">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" rows="6"></textarea>
+            </div>
+
+            <div class="letter__foot">
+              <span class="script">Yours,</span>
+              <button class="seal" type="submit" data-cursor="Seal">Seal the letter <i>&rarr;</i></button>
+            </div>
+          </form>
+
+          <!-- Shown after sealing -->
+          <div class="sent" aria-live="polite">
+            <div class="envelope">
+              <div class="envelope__body"></div>
+              <div class="envelope__flap"></div>
+              <p class="envelope__to script">To: Reflekta 1960</p>
+              <div class="stamp stamp--orange">
+                <div class="stamp__art">
+                  <svg class="stamp__star" viewBox="0 0 100 100">
+                    <g stroke="#ece7d9" stroke-width="5" stroke-linecap="round" fill="none">
+                      <path d="M50 50 L47 4" /><path d="M50 50 L92 18" /><path d="M50 50 L98 52" />
+                      <path d="M50 50 L84 90" /><path d="M50 50 L52 98" /><path d="M50 50 L14 86" />
+                      <path d="M50 50 L3 49" /><path d="M50 50 L16 14" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <svg class="envelope__postmark" viewBox="0 0 160 160" aria-hidden="true">
+                <g class="postmark__ink">
+                  <circle cx="80" cy="80" r="62" />
+                  <circle cx="80" cy="80" r="38" />
+                  <text x="80" y="86" text-anchor="middle" style="font-size:19px;letter-spacing:0">SENT</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="sent__panel">
+              <h2>Sealed!</h2>
+              <p>One last step. Send it where you like and it&rsquo;s on its way.</p>
+              <div class="sent__actions"></div>
+              <p class="sent__hint" hidden></p>
+              <button class="again" type="button">Write another</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="letter__aside">
+          <p class="eyebrow">How it works</p>
+          <h2 class="aside__title">Write us a letter.</h2>
+          <p class="aside__lead">A painting you can&rsquo;t stop thinking about, a piece of merch, or just hello. Tell us in your own words.</p>
+
+          <ol class="steps">
+            <li><span><b>Write it.</b> Fill in the letter. That&rsquo;s the easy part.</span></li>
+            <li><span><b>Seal it.</b> Watch it get stamped and postmarked.</span></li>
+            <li><span><b>Send it.</b> Pick WhatsApp or email to deliver it.</span></li>
+          </ol>
+
+          <div class="tickets"></div>
+
+          <p class="aside__note script">No message<br />too small.</p>
+        </aside>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
